@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive-pricing-component-main</title>
+    <!-- link-css -->
+     <link rel="stylesheet" href="style.css">
+     <!-- icon -->
+      <link rel="icon" href="images/favicon-32x32.png">
+</head>
+<body>
+    <header>
+        <div class="lable">
+            <h1>Simple, traffic-based pricing</h1>
+            <p> Sign-up for our 30-day trial. No credit card required. </p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="interactive_pricing">
+                <div class="row">
+                    <div class="view">
+                        <span class="views">100k PAGEVIEWS</span>
+                    </div>
+                    <div class="mo_ye">
+                        <span class="price">$20.00</span>
+                        <span class="swtich">/month</span>
+                    </div>
+                </div>
+                <input type="range" min="8" max="36" value="20" class="range">
+                <div class="row_1">
+                    <span class="monthly">Monthly Billing</span>
+                    <label for="check" class="lb">
+                        <input type="checkbox" id="check">
+                        <span class="circle"></span>
+                    </label>
+                    <span class="Yearly"> Yearly Billing</span>
+                    <span class="discount">25% discount</span>
+                </div>
+                <hr class="line">
+                <div class="row_2">
+                    <ul class="check-bar">
+                        <li><img src="images/icon-check.svg" alt="check">
+                            Unlimited websites</li>
+                        <li><img src="images/icon-check.svg" alt="check">
+                            100% data ownership</li>
+                        <li><img src="images/icon-check.svg" alt="check">
+                            Email reports</li>
+                    </ul>
+                    <button class="trial">Start my trial </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main.js -->
+     <script src="main.js"></script>
+</body>
+</html>

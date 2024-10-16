@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Manrope", sans-serif;
+}
+:root{
+    --SoftCyanFullSliderBar: hsl(174, 77%, 80%);
+    --StrongCyanSliderBackround: hsl(174, 86%, 45%);
+    --LightGrayishRedDiscountBackground: hsl(14, 92%, 95%);
+    --LightRedDiscountText: hsl(15, 100%, 70%);
+    --PaleBlueCTAText: hsl(226, 100%, 87%);
+    --WhitePricingComponentBackground: hsl (0, 0%, 100%);
+    --VeryPaleBlueMainBackground: hsl(230, 100%, 99%);
+    --LightGrayishBlueEmptySliderBar: hsl(224, 65%, 95%);
+    --LightGrayishBlueToggleBackground: hsl(223, 50%, 87%);
+    --GrayishBlueText: hsl(225, 20%, 60%);
+    --DarkDesaturatedBlueTextCTABackground: hsl(227, 35%, 25%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+header{
+    background-image: url(images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: center/center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+   
+}
+header .lable{
+    background-image: url(images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+   margin-top: 70px;
+}
+header .lable h1{
+    font-family: "Manrope";
+    font-weight: 800;
+    margin-top: 50px;
+}
+header .lable p{
+    font-size: 15px;
+    font-family: "Manrope";
+    font-weight: 600;
+    color: var( --GrayishBlueText);
+}
+
+main .container{
+    margin-bottom: 200px;
+}
+
+main .container .interactive_pricing{
+    width: 500px;
+    height: 450px;
+    background-color: var(  --VeryPaleBlueMainBackground);
+    border-radius:10px;
+    box-shadow: 0 0 10px var( --SoftCyanFullSliderBar);
+    position: absolute;
+    top: 40%;
+    left: 32%;
+}
+main .container .interactive_pricing .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+main .container .interactive_pricing .row .view .views{
+    display: inline-block;
+    color: var( --GrayishBlueText);
+}
+main .container .interactive_pricing .row .mo_ye .price{
+    display: inline-block;
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 30px;
+}
+main .container .interactive_pricing .row .mo_ye .swtich{
+    display: inline-block;
+    color: var( --GrayishBlueText);
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 15px;
+}
+main .container .interactive_pricing .range{
+    width: 80%;
+    appearance: none;
+     background:linear-gradient(to right,var(--SoftCyanFullSliderBar)0%,var( --StrongCyanSliderBackround)50%,var( --LightGrayishBlueEmptySliderBar)50%);
+    border-radius: 10px;
+    height: 10px;
+    outline: none;
+    border: none;
+    margin: 0 0 0 50px;
+}
+main .container .interactive_pricing .range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+   width: 35px;
+   height: 35px;
+   background-image: url(images/icon-slider.svg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: var(--StrongCyanSliderBackround);
+   border-radius: 50%;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   transition: all 0.8s;
+}
+main .container .interactive_pricing .range::-webkit-slider-thumb.hover{
+    box-shadow: 5px 5px 10px 5px  var(--SoftCyanFullSliderBar);
+
+}
+main .container .interactive_pricing .range::-moz-range-thumb{
+    -moz-appearance: none;
+     width: 35px;
+     height: 35px;
+     background-image: url(images/icon-slider.svg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 80%;
+     background-color: var(--StrongCyanSliderBackround);
+     border-radius: 50%;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     transition: all 0.8s;
+  }
+  main .container .interactive_pricing .range::-moz-range-thumb:hover{
+    box-shadow: 5px 5px 10px 5px  var(--SoftCyanFullSliderBar);
+  }
+  main .container .interactive_pricing .row_1{
+    display: inline-flex;
+    align-items: center;
+    margin: 50px 0 50px 100px;
+  }
+  .line{
+    height: 1px;
+    color: #ffffff;
+  }
+  main .container .interactive_pricing .row_1 .monthly{
+    font-size: 14px;
+    font-weight: 400;
+     font-family: "Manrope";
+     color: var( --GrayishBlueText);
+  }
+  main .container .interactive_pricing .row_1 .lb{
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: var(--LightGrayishBlueToggleBackground);
+    margin: 0 5px;
+    position: relative;
+    cursor: pointer;
+  }
+  main .container .interactive_pricing .row_1 .lb.active{
+    background-color: var( --StrongCyanSliderBackround);
+  }
+  main .container .interactive_pricing .row_1 #check{
+    opacity: 0;
+  }
+  main .container .interactive_pricing .row_1 .circle{
+    position: absolute;
+    top:2px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var( --LightGrayishBlueEmptySliderBar);
+    transition: all 0.6s;
+  }
+  main .container .interactive_pricing .row_1 .lb:hover{
+    background-color: var(--SoftCyanFullSliderBar);
+  }
+  main .container .interactive_pricing .row_1 .lb #check:checked + .circle{
+    transform: translateX(24px);
+  }
+  main .container .interactive_pricing .row_1 .Yearly{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+     font-family: "Manrope";
+     color: var( --GrayishBlueText);
+     margin: 0 5px;
+  }
+  main .container .interactive_pricing .row_1 .discount{
+    background-color: var( --LightGrayishRedDiscountBackground);
+    color: var(--LightRedDiscountText);
+    font-size: 14px;
+    font-weight: 400;
+     font-family: "Manrope";
+     margin: 0 5px;
+     padding: 5px;
+     border-radius:20px;
+  }
+ 
+  
+  main .container .interactive_pricing .row_2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    gap:100px;
+  }
+  main .container .interactive_pricing .row_2 .check-bar{
+    list-style: none;
+  }
+  main .container .interactive_pricing .row_2 .check-bar li{
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+     font-family: "Manrope";
+     color: var( --GrayishBlueText)
+  }
+  main .container .interactive_pricing .row_2 .check-bar li img{
+    margin-right: 10px;
+  }
+  main .container .interactive_pricing .row_2 .trial{
+    padding: 10px 50px; 
+    background-color: var(--DarkDesaturatedBlueTextCTABackground);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+     font-family: "Manrope";
+  }
+  @media(max-width:1024px){
+    main .container .interactive_pricing {
+        top: 25%;
+        left: 27%;
+      }
+      main .container .interactive_pricing .row .mo_ye{
+        position: relative;
+        top: 0px;
+        right: 8px;
+      }
+  }
+  @media(max-width:768px){
+    main .container .interactive_pricing {
+        top: 24%;
+        left: 18%;
+      }
+  }
+  @media(max-width:480px){
+    main .container .interactive_pricing {
+        top: 24%;
+        left: 4%;
+        width: 445px;
+      }
+      main .container .interactive_pricing .row_1 {
+        margin: 50px 0 50px 63px;
+      }
+      
+      main .container .interactive_pricing .row_2 {
+       gap: 69px;
+      }
+  }
+  @media(max-width:375px){
+    main .container .interactive_pricing {
+        top: 24%;
+        left: 3%;
+        width: 350px;
+      }
+      header .lable h1 {
+        font-size: 26px;
+      }
+      main .container .interactive_pricing .row .mo_ye .price {
+        font-size: 25px;
+      }
+      main .container .interactive_pricing .row .mo_ye{
+        position: relative;
+        top: 119px;
+        right: 49px;
+      }
+      main .container .interactive_pricing .row .mo_ye .price {
+        font-size: 19px;
+      }
+      main .container .interactive_pricing .row .view .views {
+        position: relative;
+        left: 72px;
+      }
+      main .container .interactive_pricing .row_1 {
+        margin: 59px 0 25px 33px;
+      }
+      main .container .interactive_pricing .row_1 .monthly {
+        font-size: 12px;
+      }
+      main .container .interactive_pricing .row_1 .Yearly {
+        font-size: 12px;
+      }
+      main .container .interactive_pricing .row_1 .discount {
+        font-size: 12px;
+      }
+      main .container .interactive_pricing .row_2 {
+        gap: 15px;
+        flex-direction: column;
+      }
+      main .container .interactive_pricing .row_2 .check-bar li:first-child{
+        margin-left: 10px;
+      }
+      main .container .interactive_pricing .row_2 .check-bar li:last-child{
+        margin-left: 15px;
+      }
+  }
+  @media(max-width:320px){
+    header .lable h1 {
+        text-align: center;
+      }
+      header .lable p {
+        text-align: center;
+      }
+      main .container .interactive_pricing {
+        top: 24%;
+        left: 2%;
+        width: 310px;
+        height: 553px;
+      }
+      main .container .interactive_pricing .row .view .views {
+        position: relative;
+        left: 63px;
+        text-align: center;
+      }
+      main .container .interactive_pricing .row .mo_ye{
+        position: relative;
+        top: 137px;
+        right: 43px;
+        text-align: center;
+      }
+      main .container .interactive_pricing .row_1 {
+        margin: 89px 0 25px 20px;
+        text-align: center;
+      }
+  }
